@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merci — InvoiceBot</title>
+  <meta name="robots" content="noindex">
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 40px;
+      max-width: 520px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 12px;
+      color: #1a1a2e;
+    }
+
+    .subtitle {
+      color: #555;
+      font-size: 1.05em;
+      margin-bottom: 24px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 0.95em;
+      min-height: 100px;
+    }
+
+    button {
+      margin-top: 12px;
+      width: 100%;
+      padding: 12px;
+      background: #1a1a2e;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .thanks {
+      margin-top: 12px;
+      display: none;
+      color: #2e7d32;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Merci 🙏</h1>
+  <p class="subtitle">
+    Tu es inscrit à l’accès anticipé d’InvoiceBot.
+  </p>
+
+  <p>
+    Question rapide (30 sec) :<br>
+    <strong>qu’est-ce que tu détestes le plus quand tu relances un client ?</strong>
+  </p>
+
+  <textarea id="feedback"></textarea>
+  <button onclick="sendFeedback()">Envoyer</button>
+
+  <p class="thanks" id="thanksMsg">Merci pour ton retour !</p>
+</div>
+
+<script>
+  function sendFeedback() {
+    const text = document.getElementById('feedback').value;
+    if (!text.trim()) return;
+
+    fetch("https://formspree.io/f/TON_ID", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        feedback: text,
+        source: "thank-you-page"
+      })
+    }).finally(() => {
+      document.getElementById('thanksMsg').style.display = "block";
+      document.getElementById('feedback').disabled = true;
+    });
+  }
+</script>
+
+</body>
+</html>
