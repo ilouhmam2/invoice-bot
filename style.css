@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #ffffff;
+  color: #111;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem;
+}
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.pain-points {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.pain-points li {
+  margin-bottom: 0.7rem;
+}
+
+.cta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.cta-form input {
+  padding: 0.9rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.cta-form button {
+  padding: 0.9rem;
+  font-size: 1rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cta-form button:hover {
+  opacity: 0.9;
+}
+
+.micro-text {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.8rem;
+}
+
+footer {
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+}
+``
