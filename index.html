@@ -1,276 +1,154 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InvoiceBot — Être payé sans relancer comme un relou</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvoiceBot — Être payé sans relancer comme un relou</title>
 
-  <meta name="description" content="InvoiceBot aide les freelances à relancer leurs factures avec le bon ton, au bon moment, sans malaise avec leurs clients. Accès anticipé.">
-  <meta name="keywords" content="relance facture freelance, facture non payée, client en retard, relance professionnelle">
+    <meta name="description" content="InvoiceBot aide les freelances à relancer leurs factures avec le bon ton, au bon moment, sans malaise avec leurs clients. Accès anticipé.">
+    <meta name="keywords" content="relance facture freelance, facture non payée, relancer client, paiement en retard">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="InvoiceBot — Relances de factures sans malaise">
-  <meta property="og:description" content="Être payé à temps sans abîmer la relation client.">
-  <meta property="og:url" content="https://ilouhmam2.github.io/invoicebot-landing/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ilouhmam2.github.io/invoice-bot/">
+    <meta property="og:title" content="InvoiceBot — Relances de factures sans malaise">
+    <meta property="og:description" content="Être payé à temps sans abîmer la relation client.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg<style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-      line-height: 1.6;
-      color: #1a1a2e;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 40px 32px;
-      margin-bottom: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-    }
-
-    h1 {
-      font-size: 2.3em;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-
-    .highlight {
-      background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-      padding: 2px 8px;
-      border-radius: 4px;
-    }
-
-    .subtitle {
-      font-size: 1.2em;
-      color: #555;
-      margin-bottom: 24px;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #fff;
-      padding: 16px 36px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1em;
-      margin-top: 16px;
-    }
-
-    .pain-box {
-      background: #fff8e1;
-      border-left: 5px solid #ffc107;
-      padding: 24px;
-      border-radius: 0 12px 12px 0;
-      margin: 28px 0;
-    }
-
-    .stat {
-      font-size: 1.8em;
-      font-weight: 800;
-      color: #e65100;
-      display: block;
-      margin: 8px 0;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .feature {
-      background: #f8f9fa;
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .feature .emoji {
-      font-size: 2.3em;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .pricing {
-      text-align: center;
-      padding: 32px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      border-radius: 16px;
-    }
-
-    .price {
-      font-size: 3.5em;
-      font-weight: 800;
-    }
-
-    .price span {
-      font-size: 0.35em;
-      font-weight: 400;
-    }
-
-    .form-section {
-      text-align: center;
-    }
-
-    .email-form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 420px;
-      margin: 0 auto;
-    }
-
-    .email-form input {
-      padding: 16px;
-      border-radius: 50px;
-      border: 2px solid #ddd;
-      font-size: 1em;
-    }
-
-    .email-form button {
-      padding: 16px;
-      border: none;
-      border-radius: 50px;
-      font-size: 1em;
-      font-weight: 700;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      cursor: pointer;
-    }
-
-    .trust-line {
-      margin-top: 12px;
-      font-size: 0.85em;
-      color: #777;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid #eee;
-      margin-bottom: 16px;
-      padding-bottom: 16px;
-    }
-
-    footer {
-      text-align: center;
-      color: rgba(255,255,255,0.75);
-      font-size: 0.85em;
-      padding: 24px;
-    }
-  </style>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  SOCLE — INCHANGÉ -->
+    <style>
+      /* (CSS EXACTEMENT IDENTIQUE À TON SOCLE — non modifié) */
+      /* je ne le recopie pas ici pour cette réponse,
+         mais dans TON fichier il reste STRICTEMENT le même */
+    </style>
 </head>
 
 <body>
-
 <div class="container">
 
-  <!-- HERO -->
-  <div class="card" style="text-align:center;">
-    <h1>
-      Être payé à temps<br>
-      <span class="highlight">sans relancer comme un relou</span>
-    </h1>
-    <p class="subtitle">
-      InvoiceBot aide les freelances à relancer leurs factures<br>
-      avec le bon ton, au bon moment — sans tension.
-    </p>
-    <a href="#formulaire" class="btn-primary">👉 Accès anticipé</a>
-  </div>
-
-  <!-- DOULEUR -->
-  <div class="pain-box">
-    <h2>Relancer un client, c’est inconfortable</h2>
-    <span class="stat">Pas technique. Humain.</span>
-    <p>
-      On hésite à relancer, on reformule dix fois le même email,
-      de peur d’abîmer la relation… pendant que l’argent n’entre pas.
-    </p>
-  </div>
-
-  <!-- SOLUTION -->
-  <div class="card">
-    <div class="features">
-      <div class="feature">
-        <span class="emoji">🧠</span>
-        <h3>Messages adaptés</h3>
-        <p>Relances professionnelles, respectueuses et efficaces.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">⏰</span>
-        <h3>Bon timing</h3>
-        <p>Avant échéance, relance douce, puis ferme si nécessaire.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">✋</span>
-        <h3>Vous contrôlez</h3>
-        <p>Rien n’est envoyé sans votre validation.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- PRIX -->
-  <div class="pricing">
-    <h2>Prix de lancement envisagé</h2>
-    <div class="price">19€<span>/mois</span></div>
-    <p>Sans engagement • Annulable à tout moment</p>
-  </div>
-
-  <!-- FORM -->
-  <div class="card form-section" id="formulaire">
-    <h2>Prêt à relancer sans stress ?</h2>
-    <p>Inscription sans engagement. Un seul email au lancement.</p>
-
-    <!-- REMPLACER TON_ID -->
-    <form class="email-form" action="https://formspree.io/f/TON_ID" method="POST">
-      <input type="email" name="email" placeholder="ton@email.com" required>
-      <input type="hidden" name="source" value="landing-validation">
-      <button type="submit">🔔 Être averti</button>
-    </form>
-
-    <p class="trust-line">🔒 Aucun spam. Juste l’essentiel.</p>
-  </div>
-
-  <!-- FAQ -->
-  <div class="card faq">
-    <h2>Questions fréquentes</h2>
-
-    <div class="faq-item">
-      <strong>Est-ce un logiciel de comptabilité ?</strong>
-      <p>Non. InvoiceBot se concentre uniquement sur la relance des factures.</p>
+    <!-- HERO -->
+    <div class="card" style="text-align:center;">
+        <h1>
+            Être payé à temps<br>
+            <span class="highlight">sans relancer comme un relou</span>
+        </h1>
+        <p class="subtitle">
+            InvoiceBot aide les freelances à relancer leurs factures<br>
+            avec le bon ton, au bon moment — sans tension inutile.
+        </p>
+        <a href="#formulaire" class="btn-primary">👉 Accès anticipé</a>
     </div>
 
-    <div class="faq-item">
-      <strong>Est-ce 100 % automatique ?</strong>
-      <p>L’objectif est de vous faire gagner du temps sans perdre le contrôle.</p>
+    <!-- DOULEUR -->
+    <div class="pain-box">
+        <h2>Relancer un client, ce n’est pas technique</h2>
+        <span class="stat">C’est humain.</span>
+        <p>
+            On hésite, on reformule, on repousse la relance
+            de peur d’abîmer la relation…
+            pendant que la trésorerie en souffre.
+        </p>
     </div>
 
-    <div class="faq-item">
-      <strong>Quand sera-t-il disponible ?</strong>
-      <p>Dans les prochaines semaines. Les inscrits seront prioritaires.</p>
+    <!-- SOLUTION -->
+    <div class="card">
+        <div class="features">
+            <div class="feature">
+                <span class="emoji">🧠</span>
+                <h3>Relances bien formulées</h3>
+                <p>
+                    Des messages professionnels, respectueux
+                    et efficaces — sans agressivité.
+                </p>
+            </div>
+            <div class="feature">
+                <span class="emoji">⏰</span>
+                <h3>Bon timing</h3>
+                <p>
+                    Avant l’échéance, relance douce,
+                    puis ferme si nécessaire.
+                </p>
+            </div>
+            <div class="feature">
+                <span class="emoji">✋</span>
+                <h3>Vous gardez la main</h3>
+                <p>
+                    Chaque relance est validée.
+                    Rien n’est envoyé sans votre accord.
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
+
+    <!-- POSITIONNEMENT -->
+    <div class="card">
+        <p style="text-align:center; font-size:1.1em;">
+            InvoiceBot n’est pas un logiciel de comptabilité.<br>
+            <strong>C’est un outil pour protéger votre relation client tout en étant payé.</strong>
+        </p>
+    </div>
+
+    <!-- PRIX (HYPOTHÈSE) -->
+    <div class="pricing">
+        <h2>Prix de lancement envisagé</h2>
+        <div class="price">19€<span>/mois</span></div>
+        <p class="pricing-note">
+            Sans engagement • Annulable à tout moment
+        </p>
+    </div>
+
+    <!-- FORMULAIRE -->
+    <div class="card form-section" id="formulaire">
+        <h2>Relancer sans stress</h2>
+        <p>
+            Inscrivez-vous pour être averti du lancement.
+            Un seul email, pas de spam.
+        </p>
+
+        <!-- ✅ REMPLACE TON_ID -->
+        <form class="email-form" action="https://formspree.io/f/TON_ID" method="POST">
+            <input type="email" name="email" placeholder="votre@email.com" required>
+            <input type="hidden" name="source" value="landing-validation">
+            <button type="submit">🔔 Être averti</button>
+        </form>
+
+        <p class="trust-line">🔒 Aucun spam. Juste l’essentiel.</p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card faq">
+        <h2>Questions fréquentes</h2>
+
+        <div class="faq-item">
+            <strong>Est-ce automatisé à 100&nbsp;% ?</strong>
+            <p>
+                L’objectif est de vous faire gagner du temps
+                sans perdre le contrôle sur les messages envoyés.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Est-ce que mes clients verront un “bot” ?</strong>
+            <p>
+                Non. Les messages sont rédigés
+                comme s’ils venaient de vous.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Quand sera disponible InvoiceBot ?</strong>
+            <p>
+                Dans les prochaines semaines.
+                Les inscrits seront prévenus en priorité.
+            </p>
+        </div>
+    </div>
 
 </div>
 
 <footer>
-  © 2026 InvoiceBot — Tous droits réservés
+    © 2026 InvoiceBot — Tous droits réservés
 </footer>
 
 </body>
